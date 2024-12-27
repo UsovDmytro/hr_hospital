@@ -4,8 +4,9 @@
             <field name="model">hr.hospital.patient</field>
             <field name="arch" type="xml">
                 <tree>
+
                     <field name="name"/>
-<!--                    <field name="doctor_id"/>-->
+                    <field name="personal_doctor_id"/>
                 </tree>
             </field>
         </record>
@@ -15,12 +16,15 @@
             <field name="model">hr.hospital.patient</field>
             <field name="arch" type="xml">
                 <form>
-                    <header></header>
+                    <header>
+                        <button name="%(hr_hospital.hr_hospital_change_doctor_wizard_action)d"
+                                string="Change doctor" type="action"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
                                 <field name="name"/>
-<!--                                <field name="doctor_id"/>-->
+                                <field name="personal_doctor_id"/>
                             </group>
                         </group>
                     </sheet>

@@ -2,19 +2,22 @@
 <odoo>
 
     <record id="hh_doctor_1" model="hr.hospital.doctor">
-        <field name="name">Harper Lee</field>
-        <field name="intern">0</field>
+        <field name="first_name">Harper</field>
+        <field name="last_name">Lee</field>
+        <field name="d_is_intern">0</field>
     </record>
 
     <record id="hh_doctor_2" model="hr.hospital.doctor">
-        <field name="name">George Orwell</field>
-        <field name="intern">1</field>
-        <field name="main_doctor_id" ref="hh_doctor_1"/>
+        <field name="first_name">George </field>
+        <field name="last_name">Orwell</field>
+        <field name="d_is_intern">1</field>
+        <field name="d_main_doctor_id" ref="hh_doctor_1"/>
     </record>
 
     <record id="hh_doctor_3" model="hr.hospital.doctor">
-        <field name="name">J.K. Rowling</field>
-        <field name="intern">0</field>
+        <field name="first_name">J.K. </field>
+        <field name="last_name">Rowling</field>
+        <field name="d_is_intern">0</field>
     </record>
 
 </odoo>

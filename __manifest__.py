@@ -12,12 +12,14 @@
     'data': [
 
         'security/ir.model.access.csv',
-
+        'wizard/hr_hospital_change_doctor_wizard_view.xml',
         'views/hr_hospital_menu.xml',
         'views/hr_hospital_doctor_views.xml',
         'views/hr_hospital_disease_views.xml',
         'views/hr_hospital_patient_views.xml',
         'views/hr_hospital_visit_views.xml',
+        'views/hr_hospital_specialty_views.xml',
+        'views/hr_hospital_diagnosis_views.xml',
 
         'data/hr.hospital.disease.csv',
     ],

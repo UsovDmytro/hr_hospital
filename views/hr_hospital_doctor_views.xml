@@ -5,9 +5,9 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
-                    <field name="intern"/>
-                    <field name="main_doctor_id"/>
-                    <field name="intern_ids"/>
+                    <field name="d_is_intern"/>
+                    <field name="d_main_doctor_id"/>
+                    <field name="d_intern_ids"/>
                 </tree>
             </field>
         </record>
@@ -22,11 +22,11 @@
                         <group>
                             <group>
                                 <field name="name"/>
-                                <field name="intern"/>
+                                <field name="d_is_intern"/>
                             </group>
                             <group>
-                                <field name="main_doctor_id"/>
-                                <field name="intern_ids" />
+                                <field name="d_main_doctor_id"/>
+                                <field name="d_intern_ids" />
                             </group>
                         </group>
                     </sheet>
