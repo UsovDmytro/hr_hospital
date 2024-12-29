@@ -4,10 +4,11 @@
             <field name="model">hr.hospital.visit</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="name"/>
                     <field name="patient_id"/>
                     <field name="doctor_id"/>
                     <field name="visit_datetime" widget="datetime"/>
+                    <field name="state"/>
+                    <field name="visited_datetime"/>
                 </tree>
             </field>
         </record>
@@ -21,10 +22,12 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="name"/>
                                 <field name="patient_id"/>
                                 <field name="doctor_id"/>
+                                <field name="state" widget="radio"/>
                                 <field name="visit_datetime" widget="datetime"/>
+                                <field name="diagnosis_ids"/>
+                                <field name="visited_datetime" readonly="True"/>
                             </group>
                         </group>
                     </sheet>

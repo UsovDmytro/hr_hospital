@@ -1,7 +1,8 @@
 import logging
+from datetime import datetime
 
 from odoo import models, fields, api, _
-from odoo.exceptions import ValidationError,UserError
+from odoo.exceptions import ValidationError, UserError
 
 _logger = logging.getLogger(__name__)
 
@@ -10,11 +11,10 @@ class HHVisit(models.Model):
     _name = 'hr.hospital.visit'
     _description = 'Visit'
 
-    name = fields.Char()
     state = fields.Selection(
-        [('plan', 'Заплановано'),
-         ('close', 'Скасовано'),
-         ('done', 'Завершено')],
+        selection=[('plan', 'Заплановано'),
+                   ('close', 'Скасовано'),
+                   ('done', 'Завершено')],
         default="plan",
         string='State',
     )
@@ -35,20 +35,23 @@ class HHVisit(models.Model):
     )
     visit_datetime = fields.Datetime()
     visited_datetime = fields.Datetime()
-    diagnosis_ids = fields.One2many('hr.hospital.diagnosis', 'visit_id',
-                                   string="diagnosis", )
+    diagnosis_ids = fields.One2many(comodel_name='hr.hospital.diagnosis', inverse_name='visit_id',
+                                    string="diagnosis", )
 
     _sql_constraints = [
 
-        ('doctor_patient_day_uniq', 'unique (doctor_id,patient_id,visit_date)', 'On this date, this patient is already registered with this doctor !')
+        ('doctor_patient_day_uniq', 'unique (doctor_id,patient_id,visit_date)',
+         'On this date, this patient is already registered with this doctor !'),
+        ('doctor_datetime_uniq', 'unique (doctor_id,visit_datetime)',
+         'On this date and time, this doctor is already busy !')
 
     ]
 
-    @api.constrains('doctor_id', 'visit_date', 'visit_time')
+    @api.depends('doctor_id', 'visit_date', 'visit_time')
     def _check_status(self):
         for record in self:
             if record.status == 'done':
-                raise ValidationError("Visit is done")
+                raise UserError("Visit is done")
 
     @api.constrains('active')
     def _check_status(self):
@@ -60,6 +63,12 @@ class HHVisit(models.Model):
     def _compute_visit_date(self):
         for visit in self:
             visit.visit_date = visit.visit_datetime.date()
+
+    @api.onchange('state')
+    def _compute_state(self):
+        for visit in self:
+            if visit.state == 'done':
+                visit.visited_datetime = datetime.now()
 
     @api.ondelete(at_uninstall=False)
     def _unlink_except_diagnosis(self):

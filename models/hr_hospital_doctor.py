@@ -3,8 +3,6 @@ import logging
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 
-# from . import hr_hospital_people_mixin
-
 _logger = logging.getLogger(__name__)
 
 
@@ -25,9 +23,9 @@ class HHDoctor(models.Model):
         comodel_name='hr.hospital.specialty',
         string="Specialty",
     )
-    d_intern_ids = fields.One2many('hr.hospital.doctor', 'd_main_doctor_id',
+    d_intern_ids = fields.One2many(comodel_name='hr.hospital.doctor', inverse_name='d_main_doctor_id',
                                    string="Subordinate Interns",)
-    d_patient_ids = fields.One2many('hr.hospital.patient', 'personal_doctor_id',
+    d_patient_ids = fields.One2many(comodel_name='hr.hospital.patient', inverse_name='personal_doctor_id',
                                     string="Patients",)
 
     @api.depends('d_is_intern')

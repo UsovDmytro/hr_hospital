@@ -16,5 +16,9 @@ class HHPerson(models.AbstractModel):
         max_width=512,
         max_height=512,
     )
-    gender = fields.Char()
+    gender = fields.Selection(
+        selection=[('male', 'male'),
+                   ('female', 'female'),
+                   ('other', 'other')],
+    )
     phone = fields.Char()
