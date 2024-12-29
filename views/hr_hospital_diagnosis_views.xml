@@ -23,7 +23,8 @@
                                 <field name="visit_id"/>
                                 <field name="disease_id"/>
                                 <field name="description"/>
-                                <field name="approved" invisible="visit_id.doctor_id.d_is_intern"/>
+                                <field name="approved_visible" invisible="1"/>
+                                <field name="approved" invisible = "not approved_visible"/>
                             </group>
                         </group>
                     </sheet>

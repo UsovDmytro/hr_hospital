@@ -8,8 +8,8 @@ _logger = logging.getLogger(__name__)
 class HHDisease(models.Model):
     _name = 'hr.hospital.disease'
     _description = 'Disease'
-    _parent_name = "parent_id"
-    _parent_store = True
+    # _parent_name = "parent_id"
+    # _parent_store = True
 
     name = fields.Char()
 
@@ -21,10 +21,10 @@ class HHDisease(models.Model):
         string='Parent Disease',
         index=True,
         ondelete='cascade')
-    parent_path = fields.Char(index=True)
-    child_id = fields.One2many(
-        comodel_name='hr.hospital.disease',
-        inverse_name='parent_id',
-        string='Child Categories')
+    # parent_path = fields.Char(index=True)
+    # child_id = fields.One2many(
+    #     comodel_name='hr.hospital.disease',
+    #     inverse_name='parent_id',
+    #     string='Child Categories')
 
 

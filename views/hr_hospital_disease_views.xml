@@ -20,7 +20,7 @@
                             <group>
                                 <field name="name"/>
                                 <field name="parent_id"/>
-                                <field name="child_id"/>
+<!--                                <field name="child_id"/>-->
                             </group>
                         </group>
                     </sheet>

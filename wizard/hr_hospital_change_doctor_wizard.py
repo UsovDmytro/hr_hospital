@@ -18,6 +18,15 @@ class HHChangeDoctor(models.TransientModel):
 
         string='Patients',)
 
+    @api.model
+    def default_get(self, fields):
+        res = super().default_get(fields)
+        if self.env.context.get('active_id'):
+            doctor_id = self.env['hr.hospital.doctor'].browse(self.env.context.get('active_id'))
+            res['personal_doctor_id'] = doctor_id.id
+            res['res_partner_ids'] = [(6, 0, doctor_id.d_patient_ids.ids)]
+        return res
+
     @api.onchange('personal_doctor_id')
     def _onchange_personal_doctor_id(self):
         self.d_patient_ids = [(6, 0, self.personal_doctor_id.d_patient_ids.ids)]

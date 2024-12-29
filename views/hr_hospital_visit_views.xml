@@ -18,7 +18,6 @@
             <field name="model">hr.hospital.visit</field>
             <field name="arch" type="xml">
                 <form>
-                    <header></header>
                     <sheet>
                         <group>
                             <group>

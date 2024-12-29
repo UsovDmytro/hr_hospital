@@ -8,8 +8,8 @@ _logger = logging.getLogger(__name__)
 class HHPerson(models.AbstractModel):
     _name = 'hr.hospital.person.mixin'
     _description = 'Person'
-    first_name = fields.Char()
-    last_name = fields.Char()
+    first_name = fields.Char(required=True)
+    last_name = fields.Char(required=True)
     active = fields.Boolean(
         default=True, )
     photo = fields.Image(
@@ -20,5 +20,6 @@ class HHPerson(models.AbstractModel):
         selection=[('male', 'male'),
                    ('female', 'female'),
                    ('other', 'other')],
+        # required=True,
     )
     phone = fields.Char()

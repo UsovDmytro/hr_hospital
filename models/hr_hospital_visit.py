@@ -24,17 +24,22 @@ class HHVisit(models.Model):
     doctor_id = fields.Many2one(
         comodel_name='hr.hospital.doctor',
         string="Doctor",
+        required=True
     )
     patient_id = fields.Many2one(
         comodel_name='hr.hospital.patient',
         string="Patient",
+        required=True
     )
     visit_date = fields.Date(
         compute='_compute_visit_date',
         store=True,
     )
-    visit_datetime = fields.Datetime()
-    visited_datetime = fields.Datetime()
+    visit_datetime = fields.Datetime(required=True)
+    visited_datetime = fields.Datetime(
+        compute='_compute_state',
+        store=True,
+    )
     diagnosis_ids = fields.One2many(comodel_name='hr.hospital.diagnosis', inverse_name='visit_id',
                                     string="diagnosis", )
 
@@ -56,7 +61,7 @@ class HHVisit(models.Model):
     @api.constrains('active')
     def _check_status(self):
         for record in self:
-            if record.active and len(record.diagnosis_ids):
+            if not record.active and len(record.diagnosis_ids):
                 raise ValidationError("You cannot archived visits for which you have already been diagnosed")
 
     @api.depends('visit_datetime')
@@ -64,11 +69,13 @@ class HHVisit(models.Model):
         for visit in self:
             visit.visit_date = visit.visit_datetime.date()
 
-    @api.onchange('state')
+    @api.depends('state')
     def _compute_state(self):
         for visit in self:
             if visit.state == 'done':
-                visit.visited_datetime = datetime.now()
+                visit.visited_datetime = fields.Datetime().now()
+            else:
+                visit.visited_datetime = False
 
     @api.ondelete(at_uninstall=False)
     def _unlink_except_diagnosis(self):

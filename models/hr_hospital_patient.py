@@ -28,7 +28,8 @@ class HHPatient(models.Model):
     def _compute_age(self):
         today = date.today()
         for patient in self:
-            if patient.birthday is None:
+            if fields.Date.to_date(patient.birthday) is None:
+                patient.age = 0
                 continue
             age = today.year - patient.birthday.year
             if (today.month, today.day) < (patient.birthday.month, patient.birthday.day):
