@@ -37,3 +37,7 @@ class HHDiagnosis(models.Model):
     @api.onchange('visit_id')
     def _onchange_visit_id(self):
         self.approved = not self.visit_id.doctor_id.d_is_intern
+
+    @api.depends('visit_id')
+    def _depends_visit_id(self):
+        self.approved = not self.visit_id.doctor_id.d_is_intern

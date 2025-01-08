@@ -47,6 +47,7 @@ class HHDoctor(models.Model):
             if record.d_is_intern and len(record.d_intern_ids) > 0:
                 raise ValidationError("The doctor has a subordinate intern! You can't list him as an intern.")
 
+    @api.depends('first_name','last_name')
     def _compute_name(self):
         for doctor in self:
             doctor.name = f'{doctor.first_name} {doctor.last_name}'

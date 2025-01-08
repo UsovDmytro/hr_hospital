@@ -1,0 +1,42 @@
+
+<odoo>
+    <data noupdate="1">
+
+        <!-- Root Diseases -->
+        <record id="disease_flu" model="hr.hospital.disease">
+            <field name="name">Flu</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="disease_cancer" model="hr.hospital.disease">
+            <field name="name">Cancer</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- Sub Diseases -->
+        <record id="disease_flu_type_a" model="hr.hospital.disease">
+            <field name="name">Flu Type A</field>
+            <field name="active">True</field>
+            <field name="parent_id" ref="disease_flu"/>
+        </record>
+
+        <record id="disease_flu_type_b" model="hr.hospital.disease">
+            <field name="name">Flu Type B</field>
+            <field name="active">True</field>
+            <field name="parent_id" ref="disease_flu"/>
+        </record>
+
+        <record id="disease_lung_cancer" model="hr.hospital.disease">
+            <field name="name">Lung Cancer</field>
+            <field name="active">True</field>
+            <field name="parent_id" ref="disease_cancer"/>
+        </record>
+
+        <record id="disease_skin_cancer" model="hr.hospital.disease">
+            <field name="name">Skin Cancer</field>
+            <field name="active">True</field>
+            <field name="parent_id" ref="disease_cancer"/>
+        </record>
+
+    </data>
+</odoo>

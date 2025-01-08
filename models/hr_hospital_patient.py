@@ -39,6 +39,7 @@ class HHPatient(models.Model):
                 age -= 1
             patient.age = age
 
+    @api.depends('first_name', 'last_name')
     def _compute_name(self):
         for patient in self:
             patient.name = f'{patient.first_name} {patient.last_name}'

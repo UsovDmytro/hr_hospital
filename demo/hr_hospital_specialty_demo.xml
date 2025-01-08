@@ -1,0 +1,46 @@
+<odoo>
+    <data noupdate="1">
+
+        <!-- Specialties -->
+        <record id="specialty_1" model="hr.hospital.specialty">
+            <field name="name">Cardiology</field>
+        </record>
+
+        <record id="specialty_2" model="hr.hospital.specialty">
+            <field name="name">Neurology</field>
+        </record>
+
+        <record id="specialty_3" model="hr.hospital.specialty">
+            <field name="name">Orthopedics</field>
+        </record>
+
+        <record id="specialty_4" model="hr.hospital.specialty">
+            <field name="name">Pediatrics</field>
+        </record>
+
+        <record id="specialty_5" model="hr.hospital.specialty">
+            <field name="name">Dermatology</field>
+        </record>
+
+        <record id="specialty_6" model="hr.hospital.specialty">
+            <field name="name">Oncology</field>
+        </record>
+
+        <record id="specialty_7" model="hr.hospital.specialty">
+            <field name="name">Radiology</field>
+        </record>
+
+        <record id="specialty_8" model="hr.hospital.specialty">
+            <field name="name">Psychiatry</field>
+        </record>
+
+        <record id="specialty_9" model="hr.hospital.specialty">
+            <field name="name">Urology</field>
+        </record>
+
+        <record id="specialty_10" model="hr.hospital.specialty">
+            <field name="name">Gastroenterology</field>
+        </record>
+
+    </data>
+</odoo>

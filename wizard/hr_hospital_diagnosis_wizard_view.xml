@@ -25,6 +25,9 @@
         <field name="name">Diagnosis</field>
         <field name="res_model">hr.hospital.diagnosis.wizard</field>
         <field name="view_mode">form</field>
+        <field name="binding_model_id" ref="model_hr_hospital_doctor"/>
+        <field name="binding_type">report</field>
+        <field name="binding_view_types">tree,form</field>
         <field name="target">new</field>
     </record>
 </odoo>

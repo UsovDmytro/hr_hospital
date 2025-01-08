@@ -1,0 +1,106 @@
+<odoo>
+    <data noupdate="1">
+
+        <!-- Doctors -->
+        <record id="doctor_1" model="hr.hospital.doctor">
+            <field name="first_name">John</field>
+            <field name="last_name">Smith</field>
+            <field name="active">True</field>
+            <field name="gender">male</field>
+            <field name="phone">+1111111111</field>
+            <field name="d_is_intern">False</field>
+            <field name="d_specialty_id" ref="specialty_1"/>
+        </record>
+
+        <record id="doctor_2" model="hr.hospital.doctor">
+            <field name="first_name">Emily</field>
+            <field name="last_name">Johnson</field>
+            <field name="active">True</field>
+            <field name="gender">female</field>
+            <field name="phone">+2222222222</field>
+            <field name="d_is_intern">True</field>
+            <field name="d_main_doctor_id" ref="doctor_1"/>
+        </record>
+
+        <record id="doctor_3" model="hr.hospital.doctor">
+            <field name="first_name">Michael</field>
+            <field name="last_name">Brown</field>
+            <field name="active">True</field>
+            <field name="gender">male</field>
+            <field name="phone">+3333333333</field>
+            <field name="d_is_intern">False</field>
+            <field name="d_specialty_id" ref="specialty_2"/>
+        </record>
+
+        <record id="doctor_4" model="hr.hospital.doctor">
+            <field name="first_name">Sophia</field>
+            <field name="last_name">Williams</field>
+            <field name="active">True</field>
+            <field name="gender">female</field>
+            <field name="phone">+4444444444</field>
+            <field name="d_is_intern">False</field>
+            <field name="d_specialty_id" ref="specialty_3"/>
+        </record>
+
+        <record id="doctor_5" model="hr.hospital.doctor">
+            <field name="first_name">James</field>
+            <field name="last_name">Miller</field>
+            <field name="active">True</field>
+            <field name="gender">male</field>
+            <field name="phone">+5555555555</field>
+            <field name="d_is_intern">False</field>
+            <field name="d_specialty_id" ref="specialty_4"/>
+        </record>
+
+        <record id="doctor_6" model="hr.hospital.doctor">
+            <field name="first_name">Olivia</field>
+            <field name="last_name">Davis</field>
+            <field name="active">True</field>
+            <field name="gender">female</field>
+            <field name="phone">+6666666666</field>
+            <field name="d_is_intern">True</field>
+            <field name="d_main_doctor_id" ref="doctor_5"/>
+        </record>
+
+        <record id="doctor_7" model="hr.hospital.doctor">
+            <field name="first_name">William</field>
+            <field name="last_name">Martinez</field>
+            <field name="active">True</field>
+            <field name="gender">male</field>
+            <field name="phone">+7777777777</field>
+            <field name="d_is_intern">False</field>
+            <field name="d_specialty_id" ref="specialty_5"/>
+        </record>
+
+        <record id="doctor_8" model="hr.hospital.doctor">
+            <field name="first_name">Isabella</field>
+            <field name="last_name">Garcia</field>
+            <field name="active">True</field>
+            <field name="gender">female</field>
+            <field name="phone">+8888888888</field>
+            <field name="d_is_intern">False</field>
+            <field name="d_specialty_id" ref="specialty_6"/>
+        </record>
+
+        <record id="doctor_9" model="hr.hospital.doctor">
+            <field name="first_name">Alexander</field>
+            <field name="last_name">Lopez</field>
+            <field name="active">True</field>
+            <field name="gender">male</field>
+            <field name="phone">+9999999999</field>
+            <field name="d_is_intern">False</field>
+            <field name="d_specialty_id" ref="specialty_7"/>
+        </record>
+
+        <record id="doctor_10" model="hr.hospital.doctor">
+            <field name="first_name">Mia</field>
+            <field name="last_name">Hernandez</field>
+            <field name="active">True</field>
+            <field name="gender">female</field>
+            <field name="phone">+1010101010</field>
+            <field name="d_is_intern">True</field>
+            <field name="d_main_doctor_id" ref="doctor_9"/>
+        </record>
+
+    </data>
+</odoo>

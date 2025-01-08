@@ -23,8 +23,8 @@
                     <header>
                         <button name="%(hr_hospital.hr_hospital_change_doctor_wizard_action)d"
                                 string="Change doctor" type="action"/>
-                        <button name="%(hr_hospital.hr_hospital_diagnosis_wizard_action)d"
-                                string="Diagnosis" type="action"/>
+<!--                        <button name="%(hr_hospital.hr_hospital_diagnosis_wizard_action)d"-->
+<!--                                string="Diagnosis" type="action"/>-->
                     </header>
                     <sheet>
                         <group>
