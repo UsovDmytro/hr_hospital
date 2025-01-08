@@ -25,25 +25,47 @@
             <field name="model">hr.hospital.patient</field>
             <field name="arch" type="xml">
                 <form>
+                    <header>
+                        <button name="create_visit_for_patient" string="Create visit" type="object"/>
+                        <button name="history_visit_for_patient" string="History visit" type="object"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
+                                <field name="photo" widget='image' class="oe_avatar m-0"
+                                       options='{"zoom": true, "preview_image":"avatar_256"}'/>
                                 <field name="name" readonly ="True"/>
                                 <field name="first_name"/>
                                 <field name="last_name"/>
-                                <field name="photo" widget='image' class="oe_avatar m-0"
-                                       options='{"zoom": true, "preview_image":"avatar_256"}'/>
                                 <field name="gender"/>
                                 <field name="phone"/>
                                 <field name="birthday"/>
+                            </group>
+                            <group>
                                 <field name="passport"/>
                                 <field name="contact_person"/>
                                 <field name="age" readonly = "True"/>
                                 <field name="personal_doctor_id"/>
                             </group>
                         </group>
+                        <notebook>
+                            <page name="page_diagnosis_ids" string="diagnosis">
+                                <field name="diagnosis_ids" readonly="True"/>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
+            </field>
+        </record>
+
+        <record id="hr_hospital_patient_search" model="ir.ui.view">
+            <field name="name">hr.hospital.patient.search (hr_hospital_patient)</field>
+            <field name="model">hr.hospital.patient</field>
+            <field name="arch" type="xml">
+                <search string="Filters">
+                    <field name="name" operator="like"/>
+                    <field name="phone"/>
+                </search>
             </field>
         </record>
 

@@ -28,6 +28,7 @@
             </field>
         </record>
 
+
         <record id="action_hr_hospital_disease_window" model="ir.actions.act_window">
             <field name="name">Disease</field>
             <field name="type">ir.actions.act_window</field>

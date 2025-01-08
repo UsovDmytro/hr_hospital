@@ -14,6 +14,14 @@ class HHDiagnosis(models.Model):
         string="Visit",
         required=True,
     )
+    visit_datetime = fields.Datetime(
+        related='visit_id.visit_datetime',
+        store=True
+    )
+    patient_id = fields.Many2one(
+        related='visit_id.patient_id',
+        store=True
+    )
     disease_id = fields.Many2one(
         comodel_name='hr.hospital.disease',
         string="Disease",

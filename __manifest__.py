@@ -23,6 +23,7 @@
         'views/hr_hospital_diagnosis_views.xml',
 
         'data/hr.hospital.disease.xml',
+        'wizard/hr_hospital_diagnosis_wizard_view.xml',
     ],
     'demo': [
         'demo/hr_hospital_doctor.xml',
