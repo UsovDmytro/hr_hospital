@@ -33,7 +33,7 @@ class HHDoctor(models.Model):
     d_patient_ids = fields.One2many(comodel_name='hr.hospital.patient', inverse_name='personal_doctor_id',
                                     string="Patients",)
     d_visit_ids = fields.One2many(comodel_name='hr.hospital.visit', inverse_name='doctor_id',
-                                    string="Visits",)
+                                  order='visit_datetime desc', string="Visits",)
 
     @api.depends('d_is_intern')
     def _onchange_d_is_intern(self):

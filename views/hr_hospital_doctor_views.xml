@@ -67,6 +67,10 @@
                 <kanban class="o_kanban_mobile" default_group_by="d_specialty_id"
                         records_draggable="False" archivable="False">
                     <templates>
+                        <t t-name="kanban-menu">
+                            <t t-if="widget.editable"><a role="menuitem" type="edit" class="dropdown-item">Edit</a></t>
+                            <t t-if="widget.deletable"><a role="menuitem" type="delete" class="dropdown-item">Delete</a></t>
+                        </t>
                         <t t-name="kanban-box">
                             <div t-attf-class="oe_kanban_content oe_kanban_global_click">
                                 <div>
@@ -78,13 +82,16 @@
                                     </div>
                                 </div>
                                 <div>
+                                  <field name="d_intern_ids" widget="many2many_tags"/>
+                                </div>
+                                <div>
                                   <field name="d_visit_ids" widget="many2many_tags"/>
                                 </div>
                                 <button type="object"
                                         name="create_visit_for_doctor"
                                         class="btn btn-primary"
                                         style="margin-top: 10px;">
-                                    Записаться
+                                    Записатись
                                 </button>
                             </div>
                         </t>

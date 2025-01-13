@@ -52,6 +52,13 @@ class HHVisit(models.Model):
 
     ]
 
+    @api.depends('patient_id', 'visit_datetime')
+    def _compute_display_name(self):
+        for record in self:
+            visit_datetime = record.visit_datetime.strftime('%Y-%m-%d %H:%M')
+            record.display_name = f"{visit_datetime} - {record.patient_id.name}"
+
+
     @api.depends('doctor_id', 'visit_date', 'visit_time')
     def _check_status(self):
         for record in self:
