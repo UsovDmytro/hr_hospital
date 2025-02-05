@@ -6,6 +6,9 @@ _logger = logging.getLogger(__name__)
 
 
 class HHPerson(models.AbstractModel):
+    """
+    Person
+    """
     _name = 'hr.hospital.person.mixin'
     _description = 'Person'
     first_name = fields.Char(required=True)

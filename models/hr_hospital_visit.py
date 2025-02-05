@@ -8,27 +8,29 @@ _logger = logging.getLogger(__name__)
 
 
 class HHVisit(models.Model):
+    """
+    Visit
+    """
     _name = 'hr.hospital.visit'
-    _description = 'Visit'
+    _description = _('Visit')
 
     state = fields.Selection(
-        selection=[('plan', 'Заплановано'),
-                   ('close', 'Скасовано'),
-                   ('done', 'Завершено')],
+        selection=[('plan', _('Заплановано')),
+                   ('close', _('Скасовано')),
+                   ('done', _('Завершено'))],
         default="plan",
-        string='State',
     )
 
     active = fields.Boolean(
         default=True, )
     doctor_id = fields.Many2one(
         comodel_name='hr.hospital.doctor',
-        string="Doctor",
+        string=_("Doctor"),
         required=True
     )
     patient_id = fields.Many2one(
         comodel_name='hr.hospital.patient',
-        string="Patient",
+        string=_("Patient"),
         required=True
     )
     visit_date = fields.Date(
@@ -41,14 +43,14 @@ class HHVisit(models.Model):
         store=True,
     )
     diagnosis_ids = fields.One2many(comodel_name='hr.hospital.diagnosis', inverse_name='visit_id',
-                                    string="diagnosis", )
+                                    string=_("diagnosis"), )
 
     _sql_constraints = [
 
         ('doctor_patient_day_uniq', 'unique (doctor_id,patient_id,visit_date)',
-         'On this date, this patient is already registered with this doctor !'),
+         _('On this date, this patient is already registered with this doctor !')),
         ('doctor_datetime_uniq', 'unique (doctor_id,visit_datetime)',
-         'On this date and time, this doctor is already busy !')
+         _('On this date and time, this doctor is already busy !'))
 
     ]
 
@@ -63,13 +65,13 @@ class HHVisit(models.Model):
     def _check_status(self):
         for record in self:
             if record.status == 'done':
-                raise UserError("Visit is done")
+                raise UserError(_("Visit is done"))
 
     @api.constrains('active')
     def _check_status(self):
         for record in self:
             if not record.active and len(record.diagnosis_ids):
-                raise ValidationError("You cannot archived visits for which you have already been diagnosed")
+                raise ValidationError(_("You cannot archived visits for which you have already been diagnosed"))
 
     @api.depends('visit_datetime')
     def _compute_visit_date(self):

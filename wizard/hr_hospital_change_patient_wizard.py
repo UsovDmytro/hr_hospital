@@ -1,22 +1,25 @@
 import logging
 
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 
 _logger = logging.getLogger(__name__)
 
 
 class HHChangePatient(models.TransientModel):
+    """
+    Change patient for doctor
+    """
     _name = 'hr.hospital.change.patient.wizard'
-    _description = 'Change patient for doctor'
+    _description = _('Change patient for doctor')
 
     personal_doctor_id = fields.Many2one(
         comodel_name='hr.hospital.doctor',
-        string='Doctor',
+        string=_('Doctor'),
     )
     d_patient_ids = fields.Many2many(
         comodel_name='hr.hospital.patient',
         readonly=True,
-        string='Patients',)
+        string=_('Patients'),)
 
     @api.model
     def default_get(self, fields):
@@ -27,4 +30,8 @@ class HHChangePatient(models.TransientModel):
         return res
 
     def change_patient(self):
+        """
+         changes the doctor's patient list
+         :return:
+         """
         self.personal_doctor_id.d_patient_ids = self.d_patient_ids

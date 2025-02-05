@@ -10,7 +10,8 @@
         'python': [],
     },
     'data': [
-
+        'security/hr_hospital_groups.xml',
+        'security/hr_hospital_security.xml',
         'security/ir.model.access.csv',
         'wizard/hr_hospital_change_doctor_wizard_view.xml',
         'wizard/hr_hospital_change_patient_wizard_view.xml',

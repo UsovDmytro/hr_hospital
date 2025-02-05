@@ -6,6 +6,9 @@ _logger = logging.getLogger(__name__)
 
 
 class HHDiagnosisWizard(models.TransientModel):
+    """
+    Diagnosis wizard
+    """
     _name = 'hr.hospital.diagnosis.wizard'
     _description = 'Diagnosis wizard'
 
@@ -29,6 +32,10 @@ class HHDiagnosisWizard(models.TransientModel):
         return res
 
     def action_refresh_pivot(self):
+        """
+         create a pivot with the specified domain
+         :return:
+        """
         domain = []
         if self.doctor_ids:
             domain.append(('visit_id.doctor_id', 'in', self.doctor_ids.ids))

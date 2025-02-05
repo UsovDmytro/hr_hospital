@@ -1,0 +1,680 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_hospital
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250123\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-03 11:57+0000\n"
+"PO-Revision-Date: 2025-02-03 11:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_hospital
+#: model:ir.actions.report,print_report_name:hr_hospital.hr_hospital_doctor_report
+msgid "(object._get_report_base_filename())"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease__active
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__active
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__active
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_person_mixin__active
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_specialty__active
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__active
+msgid "Active"
+msgstr ""
+
+#. module: hr_hospital
+#: model:res.groups,name:hr_hospital.group_hospital_admin
+msgid "Administrator"
+msgstr ""
+
+#. module: hr_hospital
+#: model:res.groups,comment:hr_hospital.group_hospital_admin
+msgid "Administrators of the Hospital (full rights)"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__age
+msgid "Age"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__approved
+msgid "Approved"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__birthday
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_patients_template
+msgid "Birthday"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_change_doctor_wizard_form
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_change_patient_wizard_form
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_diagnosis_wizard
+msgid "Cancel"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.actions.act_window,name:hr_hospital.hr_hospital_change_doctor_wizard_action
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_change_doctor_wizard_form
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_form
+msgid "Change doctor"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.actions.act_window,name:hr_hospital.hr_hospital_change_patient_wizard_action
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_change_patient_wizard_form
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_patient_tree
+msgid "Change patient"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/wizard/hr_hospital_change_patient_wizard.py:0
+#: model:ir.model,name:hr_hospital.model_hr_hospital_change_patient_wizard
+#, python-format
+msgid "Change patient for doctor"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/wizard/hr_hospital_change_doctor_wizard.py:0
+#: model:ir.model,name:hr_hospital.model_hr_hospital_change_doctor_wizard
+#, python-format
+msgid "Change personal doctor"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__contact_person
+msgid "Contact Person"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_patient_form
+msgid "Create visit"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_change_doctor_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_change_patient_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__create_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease__create_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__create_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__create_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_specialty__create_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_change_doctor_wizard__create_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_change_patient_wizard__create_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__create_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis_wizard__create_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease__create_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__create_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__create_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_specialty__create_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__approved_visible
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__d_is_intern
+msgid "D Is Intern"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis_wizard__date_from
+msgid "Date From"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis_wizard__date_to
+msgid "Date To"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_info_template
+msgid "Date/time"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_kanban
+msgid "Delete"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__description
+msgid "Description"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.actions.act_window,name:hr_hospital.action_hr_hospital_diagnosis_window
+#: model:ir.actions.act_window,name:hr_hospital.hr_hospital_diagnosis_wizard_action
+#: model:ir.model,name:hr_hospital.model_hr_hospital_diagnosis
+#: model:ir.ui.menu,name:hr_hospital.hr_hospital_menu_diagnosis
+msgid "Diagnosis"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model,name:hr_hospital.model_hr_hospital_diagnosis_wizard
+msgid "Diagnosis wizard"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_diagnosis.py:0
+#: code:addons/hr_hospital/models/hr_hospital_disease.py:0
+#: model:ir.actions.act_window,name:hr_hospital.action_hr_hospital_disease_window
+#: model:ir.model,name:hr_hospital.model_hr_hospital_disease
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__disease_id
+#: model:ir.ui.menu,name:hr_hospital.hr_hospital_menu_disease
+#, python-format
+msgid "Disease"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis_wizard__disease_ids
+msgid "Diseases"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_change_doctor_wizard__display_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_change_patient_wizard__display_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__display_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis_wizard__display_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease__display_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__display_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__display_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_specialty__display_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_doctor.py:0
+#: code:addons/hr_hospital/models/hr_hospital_visit.py:0
+#: code:addons/hr_hospital/wizard/hr_hospital_change_doctor_wizard.py:0
+#: code:addons/hr_hospital/wizard/hr_hospital_change_patient_wizard.py:0
+#: model:ir.actions.act_window,name:hr_hospital.action_hr_hospital_doctor_window
+#: model:ir.model,name:hr_hospital.model_hr_hospital_doctor
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_change_doctor_wizard__personal_doctor_id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_change_patient_wizard__personal_doctor_id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__doctor_id
+#: model:ir.ui.menu,name:hr_hospital.hr_hospital_menu_doctor
+#: model:res.groups,name:hr_hospital.group_hospital_doctor
+#, python-format
+msgid "Doctor"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.actions.report,name:hr_hospital.hr_hospital_doctor_report
+msgid "Doctor report"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis_wizard__doctor_ids
+#: model:res.groups,comment:hr_hospital.group_hospital_doctor
+msgid "Doctors"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_kanban
+msgid "Edit"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_diagnosis_search
+msgid "Filter by disease"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_diagnosis_search
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_search
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_patient_search
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_visit_search
+msgid "Filters"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__first_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__first_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_person_mixin__first_name
+msgid "First Name"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__gender
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__gender
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_person_mixin__gender
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_patients_template
+msgid "Gender"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_visit_search
+msgid "Group By"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_patient_form
+msgid "History visit"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.module.category,name:hr_hospital.category_hospital
+msgid "Hospital"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_change_doctor_wizard__id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_change_patient_wizard__id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis_wizard__id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease__id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_specialty__id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_hospital
+#: model:res.groups,name:hr_hospital.group_hospital_intern
+msgid "Intern"
+msgstr ""
+
+#. module: hr_hospital
+#: model:res.groups,comment:hr_hospital.group_hospital_intern
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_form
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_search
+msgid "Interns"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__last_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__last_name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_person_mixin__last_name
+msgid "Last Name"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_change_doctor_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_change_patient_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__write_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease__write_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__write_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__write_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_specialty__write_uid
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_change_doctor_wizard__write_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_change_patient_wizard__write_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__write_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis_wizard__write_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease__write_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__write_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__write_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_specialty__write_date
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_doctor.py:0
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__d_main_doctor_id
+#, python-format
+msgid "Main Doctor"
+msgstr ""
+
+#. module: hr_hospital
+#: model:res.groups,name:hr_hospital.group_hospital_manager
+msgid "Manager"
+msgstr ""
+
+#. module: hr_hospital
+#: model:res.groups,comment:hr_hospital.group_hospital_manager
+msgid "Managers"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_search
+msgid "Mentors"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease__name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__name
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_specialty__name
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_patients_template
+msgid "Name"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_visit.py:0
+#: model:ir.model.constraint,message:hr_hospital.constraint_hr_hospital_visit_doctor_datetime_uniq
+#, python-format
+msgid "On this date and time, this doctor is already busy !"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_visit.py:0
+#: model:ir.model.constraint,message:hr_hospital.constraint_hr_hospital_visit_doctor_patient_day_uniq
+#, python-format
+msgid "On this date, this patient is already registered with this doctor !"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_disease.py:0
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_disease__parent_id
+#, python-format
+msgid "Parent Disease"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__passport
+msgid "Passport"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_patient.py:0
+#: code:addons/hr_hospital/models/hr_hospital_visit.py:0
+#: model:ir.actions.act_window,name:hr_hospital.action_hr_hospital_patient_window
+#: model:ir.model,name:hr_hospital.model_hr_hospital_patient
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__patient_id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__patient_id
+#: model:ir.ui.menu,name:hr_hospital.hr_hospital_menu_patient
+#: model:res.groups,name:hr_hospital.group_hospital_patient
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_info_template
+#, python-format
+msgid "Patient"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_doctor.py:0
+#: code:addons/hr_hospital/wizard/hr_hospital_change_doctor_wizard.py:0
+#: code:addons/hr_hospital/wizard/hr_hospital_change_patient_wizard.py:0
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_change_doctor_wizard__d_patient_ids
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_change_patient_wizard__d_patient_ids
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__d_patient_ids
+#: model:res.groups,comment:hr_hospital.group_hospital_patient
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_form
+#, python-format
+msgid "Patients"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_patients_template
+msgid "Patients:"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model,name:hr_hospital.model_hr_hospital_person_mixin
+msgid "Person"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_patient.py:0
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__personal_doctor_id
+#, python-format
+msgid "Personal doctor"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__phone
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__phone
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_person_mixin__phone
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_patients_template
+msgid "Phone"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__photo
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__photo
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_person_mixin__photo
+msgid "Photo"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_doctor.py:0
+#: code:addons/hr_hospital/models/hr_hospital_specialty.py:0
+#: model:ir.actions.act_window,name:hr_hospital.action_hr_hospital_specialty_window
+#: model:ir.model,name:hr_hospital.model_hr_hospital_specialty
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__d_specialty_id
+#: model:ir.ui.menu,name:hr_hospital.hr_hospital_menu_specialty
+#, python-format
+msgid "Specialty"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_doctor.py:0
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__d_main_doctor_id_specialty
+#, python-format
+msgid "Specialty main doctor"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__state
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_info_template
+msgid "State"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_patients_template
+msgid "State visit"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_doctor.py:0
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__d_intern_ids
+#, python-format
+msgid "Subordinate Interns"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_doctor.py:0
+#, python-format
+msgid "The doctor has a subordinate intern! You can't list him as an intern."
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_doctor.py:0
+#: code:addons/hr_hospital/models/hr_hospital_patient.py:0
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__user_id
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__user_id
+#, python-format
+msgid "User"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.module.category,description:hr_hospital.category_hospital
+msgid "User access levels for the Hospital"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_diagnosis.py:0
+#: code:addons/hr_hospital/models/hr_hospital_visit.py:0
+#: model:ir.actions.act_window,name:hr_hospital.action_hr_hospital_visit_window
+#: model:ir.model,name:hr_hospital.model_hr_hospital_visit
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__visit_id
+#: model:ir.ui.menu,name:hr_hospital.hr_hospital_menu_visit
+#, python-format
+msgid "Visit"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__visit_date
+msgid "Visit Date"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_diagnosis__visit_datetime
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__visit_datetime
+msgid "Visit Datetime"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_visit.py:0
+#, python-format
+msgid "Visit is done"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__visited_datetime
+msgid "Visited Datetime"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_doctor.py:0
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_doctor__d_visit_ids
+#, python-format
+msgid "Visits"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_visit.py:0
+#, python-format
+msgid "You cannot archived visits for which you have already been diagnosed"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_visit.py:0
+#, python-format
+msgid "You cannot delete visits for which you have already been diagnosed"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_doctor.py:0
+#, python-format
+msgid "You cannot list an intern as a main doctor!"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_visit.py:0
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_visit__diagnosis_ids
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_patient_form
+#, python-format
+msgid "diagnosis"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_patient.py:0
+#: model:ir.model.fields,field_description:hr_hospital.field_hr_hospital_patient__diagnosis_ids
+#, python-format
+msgid "diagnosis patient"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_doctor__gender__female
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_patient__gender__female
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_person_mixin__gender__female
+msgid "female"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.ui.menu,name:hr_hospital.hr_hospital_catalog_main_menu
+#: model:ir.ui.menu,name:hr_hospital.hr_hospital_main_menu
+msgid "hospital"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_doctor__gender__male
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_patient__gender__male
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_person_mixin__gender__male
+msgid "male"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_doctor.py:0
+#: model:ir.model.constraint,message:hr_hospital.constraint_hr_hospital_doctor_user_id_uniq
+#, python-format
+msgid "one doctor - one user!"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_patient.py:0
+#: model:ir.model.constraint,message:hr_hospital.constraint_hr_hospital_patient_user_id_uniq
+#, python-format
+msgid "one patient - one user!"
+msgstr ""
+
+#. module: hr_hospital
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_doctor__gender__other
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_patient__gender__other
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_person_mixin__gender__other
+msgid "other"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_visit.py:0
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_visit__state__done
+#, python-format
+msgid "Завершено"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_doctor_kanban
+msgid "Записатись"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_visit.py:0
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_visit__state__plan
+#, python-format
+msgid "Заплановано"
+msgstr ""
+
+#. module: hr_hospital
+#. odoo-python
+#: code:addons/hr_hospital/models/hr_hospital_visit.py:0
+#: model:ir.model.fields.selection,name:hr_hospital.selection__hr_hospital_visit__state__close
+#, python-format
+msgid "Скасовано"
+msgstr ""
+
+#. module: hr_hospital
+#: model_terms:ir.ui.view,arch_db:hr_hospital.hr_hospital_diagnosis_wizard
+msgid "Сформировать"
+msgstr ""

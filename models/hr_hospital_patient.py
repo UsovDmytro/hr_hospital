@@ -1,22 +1,25 @@
 import logging
 from datetime import date
 
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 
 _logger = logging.getLogger(__name__)
 
 
 class HHPatient(models.Model):
+    """
+    Patient
+    """
     _name = 'hr.hospital.patient'
     _inherit = ['hr.hospital.person.mixin']
-    _description = 'Patient'
+    _description = _('Patient')
     name = fields.Char(
         compute='_compute_name',
         store=True,
     )
     personal_doctor_id = fields.Many2one(
         comodel_name='hr.hospital.doctor',
-        string="Personal doctor",
+        string=_("Personal doctor"),
     )
     birthday = fields.Date()
     passport = fields.Char()
@@ -24,8 +27,17 @@ class HHPatient(models.Model):
     age = fields.Integer(
         compute='_compute_age',
     )
+    user_id = fields.Many2one(
+        comodel_name='res.users',
+        string=_("User"),
+    )
     diagnosis_ids = fields.One2many(comodel_name='hr.hospital.diagnosis', inverse_name='patient_id',
-                                    string="diagnosis patient",)
+                                    string=_("diagnosis patient"),)
+
+    _sql_constraints = [
+        ('user_id_uniq', 'unique (user_id)',
+         _('one patient - one user!')),
+    ]
 
     @api.depends('birthday')
     def _compute_age(self):
@@ -45,6 +57,10 @@ class HHPatient(models.Model):
             patient.name = f'{patient.first_name} {patient.last_name}'
 
     def create_visit_for_patient(self):
+        """
+        creates a visit for the current patient
+        :return:
+        """
         self.ensure_one()
 
         context_dict = {'default_patient_id': self.id}
@@ -62,6 +78,10 @@ class HHPatient(models.Model):
                 }
 
     def history_visit_for_patient(self):
+        """
+        History visit for the current patient
+        :return:
+        """
         self.ensure_one()
 
         return {
